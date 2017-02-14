@@ -1,0 +1,52 @@
+body {
+  background-color: #ededed;
+  margin: 0 5%;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #545454;
+}
+
+.wrapper {
+  text-align: center;
+  background-color: #fff;
+}
+
+.wrapper video {
+  margin-top: 20px;
+}
+
+video {
+  max-width: 100%;
+}
+
+/* Media controls */
+
+.lower-controls {
+  display: flex;
+  justify-content: space-between;;
+}
+
+.control-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.control-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.code-time {
+  display:
+}
+
+
+
+
+p {
+  padding: 5px;
+}
+
+.highlight {
+  color: orange;
+}
