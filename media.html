@@ -7,33 +7,35 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/media.css">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="test.css">
 </head>
 <body>
 
   <div class="wrapper">
-    <div class="video-container">
+    <div id="video-container" class="video-container">
       <video id="video1">
         <source src="video/video.mp4" type="video/mp4">
         <source src="video/video.ogg" type="video/ogg">
         <!--<track label="English" kind="subtitles" srclang="en" src="video/captions.vtt" default>-->
       </video>
+    </div>
+    <div id="video-controls" class="video-controls">
+      <input type="range" id="seek-bar" value="0">
 
-      <div id="video-controls">
-        <input type="range" id="seek-bar" value="0">
-
-        <div class="lower-controls">
-          <div class="control-left">
-            <button type="button" id="play-pause"><img src="icons/play-icon.png" alt="play button"></button>
-            <div class="time-code">Test</div>
-          </div>
-
-          <div class="control-right">
-            <button type="button" id="mute"><img src="icons/volume-on-icon.png" alt="Mute Button"></button>
-            <button type="button" id="full-screen"><img src="icons/fullscreen-icon.png" alt="Fullscreen button"></button>
+      <div id="lower-controls" class="lower-controls">
+        <div class="control-left">
+          <button type="button" id="play-pause"><img src="icons/play-icon.png" alt="play button"></button>
+          <div class="time-code">
+            <span id="player_time">00:0</span>
+            <span id="duration-time">/ 00:59</span>
           </div>
         </div>
-      </div>
 
+        <div class="control-right">
+          <button type="button" id="mute"><img src="icons/volume-on-icon.png" alt="Mute Button"></button>
+          <button type="button" id="full-screen"><img src="icons/fullscreen-icon.png" alt="Fullscreen button"></button>
+        </div>
+      </div>
     </div>
 
 

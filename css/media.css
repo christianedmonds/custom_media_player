@@ -8,6 +8,8 @@ body {
 .wrapper {
   text-align: center;
   background-color: #fff;
+  max-width: 1024px;
+  margin:auto;
 }
 
 .wrapper video {
@@ -18,11 +20,35 @@ video {
   max-width: 100%;
 }
 
+.video-container {
+  position: relative;
+}
+
+#video-controls {
+  position: relative;
+  width: 99.87%;
+  max-width: 1280px;
+  bottom: 65px;
+  margin: auto;
+}
 /* Media controls */
+
+
+
+
 
 .lower-controls {
   display: flex;
-  justify-content: space-between;;
+  justify-content: space-between;
+  transition: all 0.3s ease-in;
+}
+
+.control-hide {
+  display: none;
+}
+
+.video-container:hover .lower-controls {
+  display: relative;
 }
 
 .control-left {
@@ -40,6 +66,18 @@ video {
   display:
 }
 
+/* Control styles */
+
+button {
+  border: none;
+  background: transparent;
+}
+
+
+#player_time,
+#duration-time {
+  color: #fff;
+}
 
 
 

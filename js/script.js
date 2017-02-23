@@ -12,6 +12,11 @@
   // Sliders
   var seekBar = document.getElementById("seek-bar");
 
+  // Control div
+  var playerWrapper = document.getElementsByClassName("video-container video-controls");
+  var playerButtons = document.getElementById("lower-controls");
+
+  var playerTime = document.getElementById("player_time");
 
 
 // Event listener for the play/pause button
@@ -83,22 +88,37 @@ seekBar.addEventListener("mouseup", function(){
   video.play();
 });
 
-
-
 // Style the text when being spoken in the video
-// $("p.").addClass(function() {
-//
-// }
+video.addEventListener("timeupdate", function() {
+  if (video.currentTime < 7){
+   $("p.first-text").addClass("highlight");
+  } else if (video.currentTime < 17) {
+   $("p.first-text").removeClass("highlight");
+   $("p.second-text").addClass("highlight");
+ } else if (video.currentTime < 30) {
+   $("p.second-text").removeClass("highlight");
+   $("p.third-text").addClass("highlight");
+ } else if (video.currentTime < 41) {
+   $("p.third-text").removeClass("highlight");
+   $("p.fourth-text").addClass("highlight");
+ } else if (video.currentTime < 53) {
+   $("p.fourth-text").removeClass("highlight");
+   $("p.fifth-text").addClass("highlight");
+ } else if (video.currentTime < 58) {
+   $("p.fifth-text").removeClass("highlight");
+   $("p.sixth-text").addClass("highlight");
+  }
+});
 
+video.addEventListener("timeupdate", function() {
+  var timeHolder = "00:"
+  playerTime.innerHTML = timeHolder + Math.floor(video.currentTime);
+})
 
-function highlight () {
+video.addEventListener("mouseenter", function(){
+  $(".lower-controls").removeClass("control-hide");
+});
 
-if (video.currentTime < 4){
- $("p.first-text").addClass("highlight");
-} else if (video.currentTime < 17) {
- $("p.first-text").removeClass("highlight");
- $("p.second-text").addClass("highlight");
-}
-}
-
-highlight();
+video.addEventListener("mouseleave", function(){
+  $(".lower-controls").addClass("control-hide");
+});
