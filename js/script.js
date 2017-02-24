@@ -111,14 +111,16 @@ video.addEventListener("timeupdate", function() {
 });
 
 video.addEventListener("timeupdate", function() {
-  var timeHolder = "00:"
+  var timeHolder = "0:"
   playerTime.innerHTML = timeHolder + Math.floor(video.currentTime);
 })
 
 video.addEventListener("mouseenter", function(){
-  $(".lower-controls").removeClass("control-hide");
+  $("#lower-controls").addClass("control-show");
+  $("#seek-bar").removeClass("range-lower");
 });
 
 video.addEventListener("mouseleave", function(){
-  $(".lower-controls").addClass("control-hide");
+  $("#lower-controls").removeClass("control-show");
+  $("#seek-bar").addClass("range-lower");
 });

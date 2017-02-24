@@ -31,24 +31,23 @@ video {
   bottom: 65px;
   margin: auto;
 }
+
+.range-lower {
+  position: relative;
+  bottom: -40px;
+}
+
 /* Media controls */
 
 
-
-
-
 .lower-controls {
-  display: flex;
+  display: none;
   justify-content: space-between;
   transition: all 0.3s ease-in;
 }
 
-.control-hide {
-  display: none;
-}
-
-.video-container:hover .lower-controls {
-  display: relative;
+.control-show {
+  display: flex;
 }
 
 .control-left {
@@ -61,9 +60,6 @@ video {
 .control-right {
   display: flex;
   justify-content: flex-end;
-}
-.code-time {
-  display:
 }
 
 /* Control styles */
