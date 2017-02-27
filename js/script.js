@@ -13,9 +13,7 @@
   var seekBar = document.getElementById("seek-bar");
 
   // Control div
-  var playerWrapper = document.getElementsByClassName("video-container video-controls");
-  var playerButtons = document.getElementById("lower-controls");
-
+  var playerWrapper = document.getElementById("video-container");
   var playerTime = document.getElementById("player_time");
 
 
@@ -111,16 +109,16 @@ video.addEventListener("timeupdate", function() {
 });
 
 video.addEventListener("timeupdate", function() {
-  var timeHolder = "0:"
+  var timeHolder = "0:";
   playerTime.innerHTML = timeHolder + Math.floor(video.currentTime);
-})
+});
 
-video.addEventListener("mouseenter", function(){
+playerWrapper.addEventListener("mouseenter", function(){
   $("#lower-controls").addClass("control-show");
   $("#seek-bar").removeClass("range-lower");
 });
 
-video.addEventListener("mouseleave", function(){
+playerWrapper.addEventListener("mouseleave", function(){
   $("#lower-controls").removeClass("control-show");
   $("#seek-bar").addClass("range-lower");
 });
